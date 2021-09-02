@@ -1,50 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book-Archive</title>
+    <title>Book Archive</title>
     <!-- bootstrap css link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
-<body background="images/photo-1527176930608-09cb256ab504.jpg">
-    
-    <!-- header  -->
+
+<body>
     <main>
-        <section class="container w-50 mt-5 pt-5">
-            <h1 class="text-info text-center fw-bold">Search Your Book</h1>
-            <!-- search area -->
-            <div class="input-group mb-3">
-                <input id="search-input" type="text" class="form-control" placeholder="Search Your Book Name" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button onclick="loadData()" class="btn btn-outline-secondary" type="button">Search</button>
+        
+        <section class="container mt-5 bg-info py-5">
+        <h1 class="text-center text-white mb-3">Search Your Book </h1>
+
+            <!-- search area starts -->
+            <div class="input-group mt-3">
+                <input id="input-field" type="text" class="form-control" placeholder="Search Your Favorite Books"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn bg-dark text-white" type="button" id="search-button">Search</button>
             </div>
-    
-            <!-- Add bootstrap Spinner  -->
-            <div id="spiner" class="d-flex justify-content-center d-none">
-                <div id="spinner" class="spinner-border" role="status">
-                  <span class="visually-hidden">Loading...</span>
-                </div>
+            
+            <!-- search area ends -->
+        </section>
+        <!-- spinner -->
+        <section id="spinner" class="text-center my-4">
+            <div class="spinner-border text-dark" role="status">
+                <span class="visually-hidden">Loading...</span>
             </div>
-    
-            <!-- search All results Number -->
-            <h3 id="search-numbers" class="bg-dark text-white text-center mt-5"></h3>
-    
-             <!-- error Massage -->
-            <!-- <h1 id="empty-value" class="bg-dark text-danger text-center mt-5">Please Input Your valid text</h1> -->
-    
-              <!-- search result  -->
-              <div id="search-result" class="row row-cols-1 row-cols-md-2 g-4 mt-4">
-    
-              </div>
+        </section>
+
+        <section id="error" class="text-center text-danger fs-1 fw-light"></section>
+
+        <section id="books-List" class="text-center my-4"></section>
+
+        <section class="container my-4">
+            <div id="container1" class="row row-cols-1 row-cols-md-3 g-4">
+            </div>
         </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <!-- external js file link -->
-    <script src="js/books.js"></script>
-</body>
-</html>
+    <!--my js link -->
+    <script src="app.js"></script>
 
+</body>
+
+</html>
